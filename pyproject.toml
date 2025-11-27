@@ -17,7 +17,7 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/LeonardHd/intervals-icu-client"
+Repository = "https://github.com/LeonardHd/python-intervals-icu-client"
 
 [tool.poetry]
 requires-poetry = ">=2.0"
