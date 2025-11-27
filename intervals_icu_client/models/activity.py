@@ -128,7 +128,7 @@ class Activity(BaseModel):
     ignore_parts: Optional[List[Ignore]] = None
     icu_training_load_data: Optional[StrictInt] = None
     interval_summary: Optional[List[StrictStr]] = None
-    skyline_chart_bytes: Optional[List[Union[StrictBytes, StrictStr]]] = None
+    skyline_chart_bytes: Optional[Union[StrictBytes, StrictStr]] = None
     stream_types: Optional[List[StrictStr]] = None
     has_weather: Optional[StrictBool] = None
     has_segments: Optional[StrictBool] = None

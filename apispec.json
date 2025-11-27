@@ -12969,11 +12969,8 @@
                         }
                     },
                     "skyline_chart_bytes": {
-                        "type": "array",
-                        "items": {
                             "type": "string",
                             "format": "byte"
-                        }
                     },
                     "stream_types": {
                         "type": "array",

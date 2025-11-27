@@ -1,6 +1,6 @@
 {
     "generatorName" : "python",
-    "inputSpec" : "apispec.json",
+    "inputSpec" : "/local/apispec.json",
     "outputDir" : "/local/",
     "verbose" : false,
     "packageName": "intervals_icu_client",

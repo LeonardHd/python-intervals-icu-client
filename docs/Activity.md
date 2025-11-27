@@ -99,7 +99,7 @@ Name | Type | Description | Notes
 **ignore_parts** | [**List[Ignore]**](Ignore.md) |  | [optional] 
 **icu_training_load_data** | **int** |  | [optional] 
 **interval_summary** | **List[str]** |  | [optional] 
-**skyline_chart_bytes** | **List[bytearray]** |  | [optional] 
+**skyline_chart_bytes** | **bytearray** |  | [optional] 
 **stream_types** | **List[str]** |  | [optional] 
 **has_weather** | **bool** |  | [optional] 
 **has_segments** | **bool** |  | [optional] 
