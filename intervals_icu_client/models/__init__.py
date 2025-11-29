@@ -28,6 +28,7 @@ from intervals_icu_client.models.activity_weather import ActivityWeather
 from intervals_icu_client.models.activity_weather_summary import ActivityWeatherSummary
 from intervals_icu_client.models.activity_with_intervals import ActivityWithIntervals
 from intervals_icu_client.models.anomaly import Anomaly
+from intervals_icu_client.models.apply_plan_dto import ApplyPlanDTO
 from intervals_icu_client.models.athlete import Athlete
 from intervals_icu_client.models.athlete_profile import AthleteProfile
 from intervals_icu_client.models.athlete_route import AthleteRoute

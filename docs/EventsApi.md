@@ -4,6 +4,7 @@ All URIs are relative to *https://intervals.icu*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**apply_plan**](EventsApi.md#apply_plan) | **POST** /api/v1/athlete/{id}/events/apply-plan | 
 [**create_event**](EventsApi.md#create_event) | **POST** /api/v1/athlete/{id}/events | Create an event on the athlete&#39;s calendar
 [**create_multiple_events**](EventsApi.md#create_multiple_events) | **POST** /api/v1/athlete/{id}/events/bulk | Create multiple events on the athlete&#39;s calendar
 [**delete_event**](EventsApi.md#delete_event) | **DELETE** /api/v1/athlete/{id}/events/{eventId} | Delete an event from an athlete&#39;s calendar
@@ -20,6 +21,88 @@ Method | HTTP request | Description
 [**update_event**](EventsApi.md#update_event) | **PUT** /api/v1/athlete/{id}/events/{eventId} | Update an event
 [**update_events**](EventsApi.md#update_events) | **PUT** /api/v1/athlete/{id}/events | Update all events for a date range at once. Only hide_from_athlete and athlete_cannot_edit can be updated
 
+
+# **apply_plan**
+> object apply_plan(id, apply_plan_dto)
+
+### Example
+
+* Basic Authentication (APIKey):
+* Bearer Authentication (AccessToken):
+
+```python
+import intervals_icu_client
+from intervals_icu_client.models.apply_plan_dto import ApplyPlanDTO
+from intervals_icu_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://intervals.icu
+# See configuration.py for a list of all supported configuration parameters.
+configuration = intervals_icu_client.Configuration(
+    host = "https://intervals.icu"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure HTTP basic authorization: APIKey
+configuration = intervals_icu_client.Configuration(
+    username = os.environ["USERNAME"],
+    password = os.environ["PASSWORD"]
+)
+
+# Configure Bearer authorization: AccessToken
+configuration = intervals_icu_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with intervals_icu_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = intervals_icu_client.EventsApi(api_client)
+    id = 'id_example' # str | 
+    apply_plan_dto = intervals_icu_client.ApplyPlanDTO() # ApplyPlanDTO | 
+
+    try:
+        api_response = api_instance.apply_plan(id, apply_plan_dto)
+        print("The response of EventsApi->apply_plan:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling EventsApi->apply_plan: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  | 
+ **apply_plan_dto** | [**ApplyPlanDTO**](ApplyPlanDTO.md)|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[APIKey](../README.md#APIKey), [AccessToken](../README.md#AccessToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: */*
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_event**
 > Event create_event(id, upsert_on_uid, event_ex)

@@ -55,6 +55,7 @@ __all__ = [
     "ActivityWeatherSummary",
     "ActivityWithIntervals",
     "Anomaly",
+    "ApplyPlanDTO",
     "Athlete",
     "AthleteProfile",
     "AthleteRoute",
@@ -191,6 +192,7 @@ from intervals_icu_client.models.activity_weather import ActivityWeather as Acti
 from intervals_icu_client.models.activity_weather_summary import ActivityWeatherSummary as ActivityWeatherSummary
 from intervals_icu_client.models.activity_with_intervals import ActivityWithIntervals as ActivityWithIntervals
 from intervals_icu_client.models.anomaly import Anomaly as Anomaly
+from intervals_icu_client.models.apply_plan_dto import ApplyPlanDTO as ApplyPlanDTO
 from intervals_icu_client.models.athlete import Athlete as Athlete
 from intervals_icu_client.models.athlete_profile import AthleteProfile as AthleteProfile
 from intervals_icu_client.models.athlete_route import AthleteRoute as AthleteRoute

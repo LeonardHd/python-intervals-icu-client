@@ -15,6 +15,7 @@ docs/ActivityWeather.md
 docs/ActivityWeatherSummary.md
 docs/ActivityWithIntervals.md
 docs/Anomaly.md
+docs/ApplyPlanDTO.md
 docs/Athlete.md
 docs/AthleteProfile.md
 docs/AthleteRoute.md
@@ -154,6 +155,7 @@ intervals_icu_client/models/activity_weather.py
 intervals_icu_client/models/activity_weather_summary.py
 intervals_icu_client/models/activity_with_intervals.py
 intervals_icu_client/models/anomaly.py
+intervals_icu_client/models/apply_plan_dto.py
 intervals_icu_client/models/athlete.py
 intervals_icu_client/models/athlete_profile.py
 intervals_icu_client/models/athlete_route.py
@@ -251,3 +253,4 @@ intervals_icu_client/rest.py
 setup.cfg
 setup.py
 test/__init__.py
+test/test_apply_plan_dto.py
