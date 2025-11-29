@@ -351,6 +351,7 @@ Class | Method | HTTP request | Description
  - [WithCount](docs/WithCount.md)
  - [WithSportSettings](docs/WithSportSettings.md)
  - [Workout](docs/Workout.md)
+ - [WorkoutDoc](docs/WorkoutDoc.md)
  - [WorkoutEx](docs/WorkoutEx.md)
  - [ZoneInfo](docs/ZoneInfo.md)
  - [ZoneSet](docs/ZoneSet.md)

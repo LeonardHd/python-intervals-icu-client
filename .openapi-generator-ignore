@@ -30,3 +30,7 @@ requirements.txt
 test-requirements.txt
 tox.ini
 .github/workflows/python.yml
+.env
+pyproject.toml
+.gitignore
+

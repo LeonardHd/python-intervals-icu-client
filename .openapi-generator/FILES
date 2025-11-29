@@ -1,4 +1,3 @@
-.gitignore
 README.md
 docs/ActivitiesApi.md
 docs/Activity.md
@@ -115,6 +114,7 @@ docs/WindRose.md
 docs/WithCount.md
 docs/WithSportSettings.md
 docs/Workout.md
+docs/WorkoutDoc.md
 docs/WorkoutEx.md
 docs/ZoneInfo.md
 docs/ZoneSet.md
@@ -241,13 +241,13 @@ intervals_icu_client/models/wind_rose.py
 intervals_icu_client/models/with_count.py
 intervals_icu_client/models/with_sport_settings.py
 intervals_icu_client/models/workout.py
+intervals_icu_client/models/workout_doc.py
 intervals_icu_client/models/workout_ex.py
 intervals_icu_client/models/zone_info.py
 intervals_icu_client/models/zone_set.py
 intervals_icu_client/models/zone_time.py
 intervals_icu_client/py.typed
 intervals_icu_client/rest.py
-pyproject.toml
 setup.cfg
 setup.py
 test/__init__.py

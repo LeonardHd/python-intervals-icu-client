@@ -115,6 +115,7 @@ from intervals_icu_client.models.wind_rose import WindRose
 from intervals_icu_client.models.with_count import WithCount
 from intervals_icu_client.models.with_sport_settings import WithSportSettings
 from intervals_icu_client.models.workout import Workout
+from intervals_icu_client.models.workout_doc import WorkoutDoc
 from intervals_icu_client.models.workout_ex import WorkoutEx
 from intervals_icu_client.models.zone_info import ZoneInfo
 from intervals_icu_client.models.zone_set import ZoneSet

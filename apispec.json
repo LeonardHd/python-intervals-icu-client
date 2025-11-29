@@ -9308,6 +9308,23 @@
                     }
                 }
             },
+            "WorkoutStep": {
+                "type": "object"
+            },
+            "WorkoutDoc": {
+                "type": "object",
+                "properties": {
+                    "steps": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/WorkoutStep"
+                        }
+                    }
+                },
+                "additionalProperties": {
+                    "type": "object"
+                }
+            },
             "Event": {
                 "type": "object",
                 "properties": {
@@ -9451,10 +9468,7 @@
                         "format": "int32"
                     },
                     "workout_doc": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "object"
-                        }
+                        "$ref": "#/components/schemas/WorkoutDoc"
                     },
                     "push_errors": {
                         "type": "array",

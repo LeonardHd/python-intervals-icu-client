@@ -38,7 +38,7 @@ Name | Type | Description | Notes
 **target** | **str** |  | [optional] 
 **joules** | **int** |  | [optional] 
 **joules_above_ftp** | **int** |  | [optional] 
-**workout_doc** | **Dict[str, object]** |  | [optional] 
+**workout_doc** | [**WorkoutDoc**](WorkoutDoc.md) |  | [optional] 
 **push_errors** | [**List[PushError]**](PushError.md) |  | [optional] 
 **athlete_cannot_edit** | **bool** |  | [optional] 
 **hide_from_athlete** | **bool** |  | [optional] 

@@ -142,6 +142,7 @@ __all__ = [
     "WithCount",
     "WithSportSettings",
     "Workout",
+    "WorkoutDoc",
     "WorkoutEx",
     "ZoneInfo",
     "ZoneSet",
@@ -277,6 +278,7 @@ from intervals_icu_client.models.wind_rose import WindRose as WindRose
 from intervals_icu_client.models.with_count import WithCount as WithCount
 from intervals_icu_client.models.with_sport_settings import WithSportSettings as WithSportSettings
 from intervals_icu_client.models.workout import Workout as Workout
+from intervals_icu_client.models.workout_doc import WorkoutDoc as WorkoutDoc
 from intervals_icu_client.models.workout_ex import WorkoutEx as WorkoutEx
 from intervals_icu_client.models.zone_info import ZoneInfo as ZoneInfo
 from intervals_icu_client.models.zone_set import ZoneSet as ZoneSet

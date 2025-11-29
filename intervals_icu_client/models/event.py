@@ -22,6 +22,7 @@ from pydantic import BaseModel, ConfigDict, StrictBool, StrictFloat, StrictInt, 
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from intervals_icu_client.models.attachment import Attachment
 from intervals_icu_client.models.push_error import PushError
+from intervals_icu_client.models.workout_doc import WorkoutDoc
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -62,7 +63,7 @@ class Event(BaseModel):
     target: Optional[StrictStr] = None
     joules: Optional[StrictInt] = None
     joules_above_ftp: Optional[StrictInt] = None
-    workout_doc: Optional[Dict[str, Dict[str, Any]]] = None
+    workout_doc: Optional[WorkoutDoc] = None
     push_errors: Optional[List[PushError]] = None
     athlete_cannot_edit: Optional[StrictBool] = None
     hide_from_athlete: Optional[StrictBool] = None
@@ -157,6 +158,9 @@ class Event(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of workout_doc
+        if self.workout_doc:
+            _dict['workout_doc'] = self.workout_doc.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in push_errors (list)
         _items = []
         if self.push_errors:
@@ -216,7 +220,7 @@ class Event(BaseModel):
             "target": obj.get("target"),
             "joules": obj.get("joules"),
             "joules_above_ftp": obj.get("joules_above_ftp"),
-            "workout_doc": obj.get("workout_doc"),
+            "workout_doc": WorkoutDoc.from_dict(obj["workout_doc"]) if obj.get("workout_doc") is not None else None,
             "push_errors": [PushError.from_dict(_item) for _item in obj["push_errors"]] if obj.get("push_errors") is not None else None,
             "athlete_cannot_edit": obj.get("athlete_cannot_edit"),
             "hide_from_athlete": obj.get("hide_from_athlete"),
