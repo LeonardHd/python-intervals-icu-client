@@ -34,6 +34,9 @@ jobs:
           poetry run pytest test tests/unit
 
       - name: Run integration/functional tests
+        env:
+          INTERVALS_ICU_API_KEY: ${{ secrets.INTERVALS_ICU_API_KEY }}
+          ATHLETE_ID: ${{ secrets.ATHLETE_ID }}
         run: |
           poetry run pytest tests/integration 
           poetry run pytest tests/functional
