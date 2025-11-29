@@ -37,6 +37,7 @@ testpaths = ["tests", "test"]
 pythonpath = ["."]
 markers = [
     "integration: tests that hit the real Intervals.icu API",
+    "functional: functional tests (chaining multiple API calls). Usually hits the real Intervals.icu API",
 ]
 
 
