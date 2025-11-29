@@ -1,0 +1,49 @@
+name: Publish Python package
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    environment: pypi
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Poetry and build backend
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install poetry build twine
+
+      - name: Set version from tag
+        # Expect tags like v1.2.3; strip leading 'v' and set project version
+        run: |
+          TAG="${GITHUB_REF##*/}"
+          VERSION="${TAG#v}"
+          echo "Using version $VERSION from tag $TAG"
+          poetry version "$VERSION"
+
+      - name: Build package
+        run: |
+          python -m build
+
+      - name: Publish to PyPI
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          python -m twine upload dist/*
