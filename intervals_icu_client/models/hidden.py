@@ -30,7 +30,7 @@ class Hidden(BaseModel):
     icu_athlete_id: Optional[StrictStr] = None
     start_date_local: Optional[StrictStr] = None
     source: Optional[StrictStr] = None
-    note: Optional[StrictStr] = Field(default=None, alias="_note")
+    note: StrictStr = Field(alias="_note")
     __properties: ClassVar[List[str]] = ["id", "icu_athlete_id", "start_date_local", "source", "_note"]
 
     @field_validator('source')

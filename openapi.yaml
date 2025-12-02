@@ -1579,7 +1579,9 @@ paths:
           schema:
             type: boolean
       responses:
-        default:
+        # Changing this from default to 200
+        # default:
+        "200":
           description: default response
           content:
             '*/*':
@@ -12429,6 +12431,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/IntervalGroup'
+      # Added to make icu_intervals required in this schema.
+      required:
+        - icu_intervals
     Hidden:
       type: object
       properties:
@@ -12456,6 +12461,9 @@ components:
             - CONCEPT2
         _note:
           type: string
+      # added to make Hidden from other responses.
+      required:
+        - _note
   securitySchemes:
     APIKey:
       type: http

@@ -14,10 +14,10 @@
 
 import unittest
 
-from intervals_icu_client.models.get_activity_default_response import GetActivityDefaultResponse
+from intervals_icu_client.models.get_activity200_response import GetActivity200Response
 
-class TestGetActivityDefaultResponse(unittest.TestCase):
-    """GetActivityDefaultResponse unit test stubs"""
+class TestGetActivity200Response(unittest.TestCase):
+    """GetActivity200Response unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,16 +25,16 @@ class TestGetActivityDefaultResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> GetActivityDefaultResponse:
-        """Test GetActivityDefaultResponse
+    def make_instance(self, include_optional) -> GetActivity200Response:
+        """Test GetActivity200Response
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `GetActivityDefaultResponse`
+        # uncomment below to create an instance of `GetActivity200Response`
         """
-        model = GetActivityDefaultResponse()
+        model = GetActivity200Response()
         if include_optional:
-            return GetActivityDefaultResponse(
+            return GetActivity200Response(
                 id = '',
                 start_date_local = '',
                 type = '',
@@ -437,12 +437,12 @@ class TestGetActivityDefaultResponse(unittest.TestCase):
                 note = ''
             )
         else:
-            return GetActivityDefaultResponse(
+            return GetActivity200Response(
         )
         """
 
-    def testGetActivityDefaultResponse(self):
-        """Test GetActivityDefaultResponse"""
+    def testGetActivity200Response(self):
+        """Test GetActivity200Response"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

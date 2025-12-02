@@ -24,11 +24,11 @@ from pydantic import StrictStr, Field
 from typing import Union, List, Set, Optional, Dict
 from typing_extensions import Literal, Self
 
-GETACTIVITYDEFAULTRESPONSE_ONE_OF_SCHEMAS = ["Activity", "ActivityWithIntervals", "Hidden"]
+GETACTIVITY200RESPONSE_ONE_OF_SCHEMAS = ["Activity", "ActivityWithIntervals", "Hidden"]
 
-class GetActivityDefaultResponse(BaseModel):
+class GetActivity200Response(BaseModel):
     """
-    GetActivityDefaultResponse
+    GetActivity200Response
     """
     # data type: Activity
     oneof_schema_1_validator: Optional[Activity] = None
@@ -57,7 +57,7 @@ class GetActivityDefaultResponse(BaseModel):
 
     @field_validator('actual_instance')
     def actual_instance_must_validate_oneof(cls, v):
-        instance = GetActivityDefaultResponse.model_construct()
+        instance = GetActivity200Response.model_construct()
         error_messages = []
         match = 0
         # validate data type: Activity
@@ -77,10 +77,10 @@ class GetActivityDefaultResponse(BaseModel):
             match += 1
         if match > 1:
             # more than 1 match
-            raise ValueError("Multiple matches found when setting `actual_instance` in GetActivityDefaultResponse with oneOf schemas: Activity, ActivityWithIntervals, Hidden. Details: " + ", ".join(error_messages))
+            raise ValueError("Multiple matches found when setting `actual_instance` in GetActivity200Response with oneOf schemas: Activity, ActivityWithIntervals, Hidden. Details: " + ", ".join(error_messages))
         elif match == 0:
             # no match
-            raise ValueError("No match found when setting `actual_instance` in GetActivityDefaultResponse with oneOf schemas: Activity, ActivityWithIntervals, Hidden. Details: " + ", ".join(error_messages))
+            raise ValueError("No match found when setting `actual_instance` in GetActivity200Response with oneOf schemas: Activity, ActivityWithIntervals, Hidden. Details: " + ", ".join(error_messages))
         else:
             return v
 
@@ -116,10 +116,10 @@ class GetActivityDefaultResponse(BaseModel):
 
         if match > 1:
             # more than 1 match
-            raise ValueError("Multiple matches found when deserializing the JSON string into GetActivityDefaultResponse with oneOf schemas: Activity, ActivityWithIntervals, Hidden. Details: " + ", ".join(error_messages))
+            raise ValueError("Multiple matches found when deserializing the JSON string into GetActivity200Response with oneOf schemas: Activity, ActivityWithIntervals, Hidden. Details: " + ", ".join(error_messages))
         elif match == 0:
             # no match
-            raise ValueError("No match found when deserializing the JSON string into GetActivityDefaultResponse with oneOf schemas: Activity, ActivityWithIntervals, Hidden. Details: " + ", ".join(error_messages))
+            raise ValueError("No match found when deserializing the JSON string into GetActivity200Response with oneOf schemas: Activity, ActivityWithIntervals, Hidden. Details: " + ", ".join(error_messages))
         else:
             return instance
 

@@ -1,4 +1,4 @@
-# GetActivityDefaultResponse
+# GetActivity200Response
 
 
 ## Properties
@@ -178,26 +178,26 @@ Name | Type | Description | Notes
 **icu_average_watts** | **int** |  | [optional] 
 **icu_variability_index** | **float** |  | [optional] 
 **strain_score** | **float** |  | [optional] 
-**icu_intervals** | [**List[Interval]**](Interval.md) |  | [optional] 
+**icu_intervals** | [**List[Interval]**](Interval.md) |  | 
 **icu_groups** | [**List[IntervalGroup]**](IntervalGroup.md) |  | [optional] 
-**note** | **str** |  | [optional] 
+**note** | **str** |  | 
 
 ## Example
 
 ```python
-from intervals_icu_client.models.get_activity_default_response import GetActivityDefaultResponse
+from intervals_icu_client.models.get_activity200_response import GetActivity200Response
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of GetActivityDefaultResponse from a JSON string
-get_activity_default_response_instance = GetActivityDefaultResponse.from_json(json)
+# create an instance of GetActivity200Response from a JSON string
+get_activity200_response_instance = GetActivity200Response.from_json(json)
 # print the JSON string representation of the object
-print(GetActivityDefaultResponse.to_json())
+print(GetActivity200Response.to_json())
 
 # convert the object into a dict
-get_activity_default_response_dict = get_activity_default_response_instance.to_dict()
-# create an instance of GetActivityDefaultResponse from a dict
-get_activity_default_response_from_dict = GetActivityDefaultResponse.from_dict(get_activity_default_response_dict)
+get_activity200_response_dict = get_activity200_response_instance.to_dict()
+# create an instance of GetActivity200Response from a dict
+get_activity200_response_from_dict = GetActivity200Response.from_dict(get_activity200_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

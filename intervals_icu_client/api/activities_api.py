@@ -32,7 +32,7 @@ from intervals_icu_client.models.bucket import Bucket
 from intervals_icu_client.models.data_curve_set_hr_curve import DataCurveSetHRCurve
 from intervals_icu_client.models.data_curve_set_pace_curve import DataCurveSetPaceCurve
 from intervals_icu_client.models.data_curve_set_power_curve import DataCurveSetPowerCurve
-from intervals_icu_client.models.get_activity_default_response import GetActivityDefaultResponse
+from intervals_icu_client.models.get_activity200_response import GetActivity200Response
 from intervals_icu_client.models.hr_curve import HRCurve
 from intervals_icu_client.models.hr_load_model import HRLoadModel
 from intervals_icu_client.models.icu_segment import IcuSegment
@@ -2999,7 +2999,7 @@ class ActivitiesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> GetActivityDefaultResponse:
+    ) -> GetActivity200Response:
         """Get an activity
 
         An empty stub object is returned for Strava activities
@@ -3040,6 +3040,7 @@ class ActivitiesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
+            '200': "GetActivity200Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -3069,7 +3070,7 @@ class ActivitiesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[GetActivityDefaultResponse]:
+    ) -> ApiResponse[GetActivity200Response]:
         """Get an activity
 
         An empty stub object is returned for Strava activities
@@ -3110,6 +3111,7 @@ class ActivitiesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
+            '200': "GetActivity200Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -3180,6 +3182,7 @@ class ActivitiesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
+            '200': "GetActivity200Response",
         }
         response_data = self.api_client.call_api(
             *_param,

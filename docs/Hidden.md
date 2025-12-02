@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **icu_athlete_id** | **str** |  | [optional] 
 **start_date_local** | **str** |  | [optional] 
 **source** | **str** |  | [optional] 
-**note** | **str** |  | [optional] 
+**note** | **str** |  | 
 
 ## Example
 

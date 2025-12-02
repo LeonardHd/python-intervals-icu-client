@@ -178,7 +178,7 @@ Name | Type | Description | Notes
 **icu_average_watts** | **int** |  | [optional] 
 **icu_variability_index** | **float** |  | [optional] 
 **strain_score** | **float** |  | [optional] 
-**icu_intervals** | [**List[Interval]**](Interval.md) |  | [optional] 
+**icu_intervals** | [**List[Interval]**](Interval.md) |  | 
 **icu_groups** | [**List[IntervalGroup]**](IntervalGroup.md) |  | [optional] 
 
 ## Example

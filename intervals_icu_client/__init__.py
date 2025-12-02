@@ -92,7 +92,7 @@ __all__ = [
     "Gear",
     "GearReminder",
     "GearStats",
-    "GetActivityDefaultResponse",
+    "GetActivity200Response",
     "HRCurve",
     "HRLoadModel",
     "HRRecovery",
@@ -229,7 +229,7 @@ from intervals_icu_client.models.forecast import Forecast as Forecast
 from intervals_icu_client.models.gear import Gear as Gear
 from intervals_icu_client.models.gear_reminder import GearReminder as GearReminder
 from intervals_icu_client.models.gear_stats import GearStats as GearStats
-from intervals_icu_client.models.get_activity_default_response import GetActivityDefaultResponse as GetActivityDefaultResponse
+from intervals_icu_client.models.get_activity200_response import GetActivity200Response as GetActivity200Response
 from intervals_icu_client.models.hr_curve import HRCurve as HRCurve
 from intervals_icu_client.models.hr_load_model import HRLoadModel as HRLoadModel
 from intervals_icu_client.models.hr_recovery import HRRecovery as HRRecovery

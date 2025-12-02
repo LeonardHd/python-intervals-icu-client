@@ -57,7 +57,7 @@ docs/Gear.md
 docs/GearApi.md
 docs/GearReminder.md
 docs/GearStats.md
-docs/GetActivityDefaultResponse.md
+docs/GetActivity200Response.md
 docs/HRCurve.md
 docs/HRLoadModel.md
 docs/HRRecovery.md
@@ -192,7 +192,7 @@ intervals_icu_client/models/forecast.py
 intervals_icu_client/models/gear.py
 intervals_icu_client/models/gear_reminder.py
 intervals_icu_client/models/gear_stats.py
-intervals_icu_client/models/get_activity_default_response.py
+intervals_icu_client/models/get_activity200_response.py
 intervals_icu_client/models/hidden.py
 intervals_icu_client/models/hr_curve.py
 intervals_icu_client/models/hr_load_model.py
@@ -253,4 +253,3 @@ intervals_icu_client/rest.py
 setup.cfg
 setup.py
 test/__init__.py
-test/test_apply_plan_dto.py

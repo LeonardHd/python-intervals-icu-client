@@ -921,7 +921,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_activity**
-> GetActivityDefaultResponse get_activity(id, intervals=intervals)
+> GetActivity200Response get_activity(id, intervals=intervals)
 
 Get an activity
 
@@ -934,7 +934,7 @@ An empty stub object is returned for Strava activities
 
 ```python
 import intervals_icu_client
-from intervals_icu_client.models.get_activity_default_response import GetActivityDefaultResponse
+from intervals_icu_client.models.get_activity200_response import GetActivity200Response
 from intervals_icu_client.rest import ApiException
 from pprint import pprint
 
@@ -988,7 +988,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetActivityDefaultResponse**](GetActivityDefaultResponse.md)
+[**GetActivity200Response**](GetActivity200Response.md)
 
 ### Authorization
 
@@ -1003,7 +1003,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**0** | default response |  -  |
+**200** | default response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

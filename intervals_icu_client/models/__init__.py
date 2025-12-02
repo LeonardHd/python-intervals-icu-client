@@ -65,7 +65,7 @@ from intervals_icu_client.models.forecast import Forecast
 from intervals_icu_client.models.gear import Gear
 from intervals_icu_client.models.gear_reminder import GearReminder
 from intervals_icu_client.models.gear_stats import GearStats
-from intervals_icu_client.models.get_activity_default_response import GetActivityDefaultResponse
+from intervals_icu_client.models.get_activity200_response import GetActivity200Response
 from intervals_icu_client.models.hr_curve import HRCurve
 from intervals_icu_client.models.hr_load_model import HRLoadModel
 from intervals_icu_client.models.hr_recovery import HRRecovery
