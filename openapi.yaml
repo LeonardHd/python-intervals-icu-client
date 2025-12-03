@@ -6211,10 +6211,11 @@ components:
         joules_above_ftp:
           type: integer
           format: int32
-        workout_doc:
-          type: object
-          additionalProperties:
-            type: object
+        # NOTE: workout_doc does not seem to work at this time
+        # workout_doc:
+        #   type: object
+        #   additionalProperties:
+        #     type: object
         push_errors:
           type: array
           items:

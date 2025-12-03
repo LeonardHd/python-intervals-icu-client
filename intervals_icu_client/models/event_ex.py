@@ -63,7 +63,6 @@ class EventEx(BaseModel):
     target: Optional[StrictStr] = None
     joules: Optional[StrictInt] = None
     joules_above_ftp: Optional[StrictInt] = None
-    workout_doc: Optional[Dict[str, Dict[str, Any]]] = None
     push_errors: Optional[List[PushError]] = None
     athlete_cannot_edit: Optional[StrictBool] = None
     hide_from_athlete: Optional[StrictBool] = None
@@ -91,7 +90,7 @@ class EventEx(BaseModel):
     filename: Optional[StrictStr] = None
     icu_intensity: Optional[Union[StrictFloat, StrictInt]] = None
     strain_score: Optional[Union[StrictFloat, StrictInt]] = None
-    __properties: ClassVar[List[str]] = ["id", "start_date_local", "icu_training_load", "icu_atl", "icu_ctl", "type", "carbs_used", "ss_p_max", "ss_w_prime", "ss_cp", "calendar_id", "uid", "athlete_id", "category", "end_date_local", "name", "description", "indoor", "color", "moving_time", "icu_ftp", "w_prime", "p_max", "atl_days", "ctl_days", "updated", "not_on_fitness_chart", "show_as_note", "show_on_ctl_line", "for_week", "target", "joules", "joules_above_ftp", "workout_doc", "push_errors", "athlete_cannot_edit", "hide_from_athlete", "structure_read_only", "created_by_id", "shared_event_id", "entered", "carbs_per_hour", "sub_type", "distance", "tags", "attachments", "oauth_client_id", "external_id", "load_target", "time_target", "distance_target", "plan_athlete_id", "plan_folder_id", "plan_workout_id", "plan_applied", "workout", "file_contents", "file_contents_base64", "filename", "icu_intensity", "strain_score"]
+    __properties: ClassVar[List[str]] = ["id", "start_date_local", "icu_training_load", "icu_atl", "icu_ctl", "type", "carbs_used", "ss_p_max", "ss_w_prime", "ss_cp", "calendar_id", "uid", "athlete_id", "category", "end_date_local", "name", "description", "indoor", "color", "moving_time", "icu_ftp", "w_prime", "p_max", "atl_days", "ctl_days", "updated", "not_on_fitness_chart", "show_as_note", "show_on_ctl_line", "for_week", "target", "joules", "joules_above_ftp", "push_errors", "athlete_cannot_edit", "hide_from_athlete", "structure_read_only", "created_by_id", "shared_event_id", "entered", "carbs_per_hour", "sub_type", "distance", "tags", "attachments", "oauth_client_id", "external_id", "load_target", "time_target", "distance_target", "plan_athlete_id", "plan_folder_id", "plan_workout_id", "plan_applied", "workout", "file_contents", "file_contents_base64", "filename", "icu_intensity", "strain_score"]
 
     @field_validator('category')
     def category_validate_enum(cls, value):
@@ -224,7 +223,6 @@ class EventEx(BaseModel):
             "target": obj.get("target"),
             "joules": obj.get("joules"),
             "joules_above_ftp": obj.get("joules_above_ftp"),
-            "workout_doc": obj.get("workout_doc"),
             "push_errors": [PushError.from_dict(_item) for _item in obj["push_errors"]] if obj.get("push_errors") is not None else None,
             "athlete_cannot_edit": obj.get("athlete_cannot_edit"),
             "hide_from_athlete": obj.get("hide_from_athlete"),
